@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qual seu Pais ?</title>
+    <style>
+        body{
+            background: navajowhite;
+        }
+        input#verifica{
+            width: 50px;
+            height: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Digite seu pais:</h1>
+    <input type="text" name="txtpais" id="txtpais">
+    <input type="buttom" value="Verificar" id="verifica" onclick="verifica()">
+    <div id='p'>
+        
+    </div>
+    <script>
+    var tpais = window.document.getElementById('txtpais')
+    var p = window.document.getElementById('p')
+    var pais = String(tpais.value)
+    function verifica(){
+        if (pais == "Brasil" || 'brasil'){
+            p.innerHTML = 'Você é brasileiro!'
+        }else{
+            p.innerHTML = 'Você é estrangeiro!'
+            p.innerHTML += 'Vivendo em ' + pais
+        }
+    }
+    </script>
+</body>
+</html>

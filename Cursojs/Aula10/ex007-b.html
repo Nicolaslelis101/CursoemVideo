@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fazendo Calcúlos</title>
+    <style>
+        body{
+            background-color: chocolate;
+        }
+        h1#titulo{
+            text-align: center;
+            font: normal 30pt Times;
+        }
+        h1, div{
+            color: rgb(211, 211, 211);
+            font: normal 18pt Times;
+        }
+        input{
+            width: 60px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="titulo">Cáculos</h1>
+    <h1>Soma</h1>
+    <input type="number" name="txtsom1" id="txtsom1">
+    <input type="number" name="txtsom2" id="txtsom2">
+    <input type="buttom" value="Somar" onclick="somar()">
+    <div id="res_som">Resposta</div>
+    <br>
+    <h1>Subtração</h1>
+    <input type="number" name="txtsub1" id="txtsub1">
+    <input type="number" name="txtsub2" id="txtsub2">
+    <input type="buttom" value="Subtrair" onclick="subtrair()">
+    <div id="res_sub">Resposta</div>
+    <br>
+    <h1>Multiplicação</h1>
+    <input type="number" name="txtmult1" id="txtmult1">
+    <input type="number" name="txtmult2" id="txtmult2">
+    <input type="buttom" value="Multiplicar" onclick="multiplicar()">
+    <div id="res_mult">Resposta</div>
+    <br>
+    <h1>Divisão</h1>
+    <input type="number" name="txtdiv1" id="txtdiv1">
+    <input type="number" name="txtdiv2" id="txtdiv2">
+    <input type="buttom" value="Dividir" onclick="dividir()">
+    <div id="res_div">Resposta</div>
+
+    <script>
+        function somar(){
+            let txt1 = window.document.getElementById('txtsom1')
+            let txt2 = window.document.getElementById('txtsom2')
+            let res = window.document.getElementById('res_som')
+            n1 = Number(txt1.value)
+            n2 = Number(txt2.value)
+            soma = n1 + n2
+            res.innerHTML = "Resposta : " + soma
+        }
+        function subtrair(){
+            let txt1 = window.document.getElementById('txtsub1')
+            let txt2 = window.document.getElementById('txtsub2')
+            let res = window.document.getElementById('res_sub')
+            n1 = Number(txt1.value)
+            n2 = Number(txt2.value)
+            subtrai = n1 - n2
+            res.innerHTML = 'Resposta: ' + subtrai
+        }
+        function multiplicar(){
+            let txt1 = window.document.getElementById('txtmult1')
+            let txt2 = window.document.getElementById('txtmult2')
+            let res = window.document.getElementById('res_mult')
+            n1 = Number(txt1.value)
+            n2 = Number(txt2.value)
+            multplica = n1 * n2
+            res.innerHTML = "Resposta: " + multplica
+        }
+        function dividir(){
+            let txt1 = window.document.getElementById('txtdiv1')
+            let txt2 = window.document.getElementById('txtdiv2')
+            let res = window.document.getElementById('res_div')
+            n1 = Number(txt1.value)
+            n2 = Number(txt2.value)
+            divide = n1 / n2
+            res.innerHTML = "Resposta: " + divide 
+        }
+    </script>
+</body>
+</html>
